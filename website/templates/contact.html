@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title%} Contact Us! {% endblock %}
+{% block content %}
+
+        <!-- start page-title -->
+        <section class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <h2>Contact</h2>
+                        <ol class="breadcrumb">
+                            <li><a href="index-2.html">Home</a></li>
+                            <li>Contact</li>
+                        </ol>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>        
+        <!-- end page-title -->
+
+
+        <!-- start contact-pg-section -->
+        <section class="contact-pg-section section-padding">
+            <div class="container">
+                {% if f_name %}
+                <center>
+                    <h2>
+                        Thanks for your message
+                    </h2>
+                    <p>
+                        We will respond you asap!
+                    </p>
+                </center>
+
+
+                {% else %}
+                <div class="row">
+                    <div class="col col-md-3">
+                        <div class="contact-info">
+                            <ul>
+                                <li>
+                                    <div class="icon"><i class="fa fa-phone"></i></div>
+                                    <p><span>Hotline</span> +1 214-395-1270 </p>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="fa fa-envelope"></i></div>
+                                    <p><span>Email</span> admin@m-electric.net  </p>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="fa fa-clock-o"></i></div>
+                                    <p><span>Working Hours:</span> Monday to Friday from 8:00-16:00 hrs and Saturday from 8:00-12:00 MD </p>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="fa fa-location-arrow"></i></div>
+                                    <p><span>Office</span> 13629 Heartside pl, Dallas, TX 75234-4822 </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col col-md-offset-1 col-md-8">
+                        <div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6697.613506117659!2d-96.89018496744423!3d32.92970358349177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c27ac33b72d73%3A0x4325a312a5a1cf2e!2s13629%20Heartside%20Pl%2C%20Farmers%20Branch%2C%20TX%2075234%2C%20EE.%20UU.!5e0!3m2!1ses!2ssv!4v1628353781156!5m2!1ses!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> 
+                        </div>
+                        <!-- <div class="location-map" id="map">                                                    
+                        </div>
+                }
+ -->                        
+                    </div>
+                </div> <!-- end row -->
+                {% endif %}
+                <div class="row">
+                    <div class="col col-xs-12">
+
+                        <!-- <form class="contact-form form contact-validation-active row" id="contact-form-s2" action="{% url 'contact' %}" method="post"> -->
+                            <form class="contact-form form contact-validation-active row" action="{% url 'contact' %}" method="post">
+                            {% csrf_token %}
+                            <div class="col col-sm-6">
+                                <label for="f-name">First Name {{f_name}}</label>
+                                <input type="text" class="form-control" id="f-name" name="f_name">
+                            </div>
+                            <div class="col col-sm-6">
+                                <label for="l-name">Last Name</label>
+                                <input type="text" class="form-control" id="l-name" name="l_name">
+                            </div>
+                            <div class="col col-sm-6">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                            <div class="col col-sm-6">
+                                <label for="phone">Phone No</label>
+                                <input type="text" class="form-control" id="phone" name="phone">
+                            </div>
+                            <div class="col col-sm-12">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" name="note"></textarea>
+                            </div>
+                            <div class="col col-sm-12 submit-btn">
+                                <button class="theme-btn" type="submit">Submit</button>
+                                <div id="loader">
+                                    <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+                                </div>
+                            </div>
+                            <div class="error-handling-messages">
+                                <div id="success">Thank you</div>
+                                <div id="error"> Error occurred while sending email. Please try again later. </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end contact-pg-section -->
+
+{% endblock %}
