@@ -694,11 +694,17 @@ img {
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s,
+ -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,
+ box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,
+ -webkit-box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,
+ box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,
+ box-shadow ease-in-out .15s,
+ -webkit-box-shadow ease-in-out .15s;
 }
 
 .wpcf7-form select {
@@ -3473,6 +3479,83 @@ img {
     font-weight: 600;
   }
 }
+
+
+
+
+
+
+.header-style-6 .social {
+  float: right;
+}
+
+@media (max-width: 991px) {
+  .header-style-6 .social {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-style-6 .social {
+    float: none;
+    text-align: center;
+    margin-top: 15px;
+  }
+}
+
+.header-style-5 .topbar {
+  background-color: #051829;
+}
+
+.header-style-6 .social-links {
+  top: 5px;
+}
+
+.header-style-6 .social > span {
+  top: 0;
+}
+
+
+
+
+
+
+
+
+
+.header-style-6 .social > span {
+  font-size: 14px;
+  font-size: 0.93333rem;  
+  color: #111183;
+  position: relative;
+  top: 9px;
+}
+
+.header-style-6 .social-links {
+  display: inline-block;
+  position: relative;
+  top: 15px;
+  left: 8px;
+}
+
+.header-style-6 .social-links > li + li {
+  margin-left: 15px;
+}
+
+.header-style-6 .social-links li a {
+  font-size: 14px;
+  font-size: 0.93333rem;
+  color: #111183;
+}
+
+
+
+
+
+
+
+
+
 
 .header-style-6 .topbar-style-2 .theme-btn, .header-style-6 .topbar-style-2 .theme-btn-s2, .header-style-6 .topbar-style-2 .theme-btn-s3, .header-style-6 .topbar-style-2 .theme-btn-s4, .header-style-6 .topbar-style-2 .theme-btn-s5 {
   color: #fff;
