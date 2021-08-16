@@ -121,8 +121,8 @@
                         <button class="close-navbar"><i class="fa fa-close"></i></button>
                         <ul class="nav navbar-nav">
                             <li><a href="{% url 'home' %}">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="services.html">Services</a></li>
+                            <!-- <li><a href="#">Services</a></li> -->
+                            <li><a href="{% url 'about' %}">About</a></li>                            
                             <!-- <li><a href="projects.html">Projects</a></li> -->
                             <li><a href="{% url 'contact' %}">Contact</a></li>
                         </ul>
@@ -178,8 +178,8 @@
                                 <h3>Navigation</h3>
                                 <ul>
                                     <li><a href="{% url 'home' %}">Home</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Services</a></li>
+                                    <li><a href="{% url 'about'  %}">About</a></li>
+                                    <!-- <li><a href="#">Services</a></li> -->
                                     <li><a href="{% url 'contact' %}">Contact Us</a></li>                                    
                                 </ul>
                             </div>

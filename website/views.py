@@ -6,6 +6,9 @@ from django.core.mail import send_mail
 def home(request):
 	return render(request, 'home.html', {})
 
+def about(request):
+	return render(request, 'about.html', {})
+
 def contact(request):
 	if request.method == 'POST':
 		message_f_name = request.POST['f_name']
