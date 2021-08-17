@@ -1,295 +1,314 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+    {% extends 'base.html' %}
+    {% load static %}
+    {% block content %}
 
 
-        <!-- start page-title -->
-        <section class="page-title">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-xs-12">
-                        <h2>About us</h2>
-                        <ol class="breadcrumb">
-                            <li><a href="index-2.html">Home</a></li>
-                            <li>About us</li>
-                        </ol>
-                    </div>
-                </div> <!-- end row -->
-            </div> <!-- end container -->
-        </section>        
-        <!-- end page-title -->
+    <!-- start page-title -->
+    <section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col col-xs-12">
+                    <h2>About us</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li>About us</li>
+                    </ol>
+                </div>
+            </div> <!-- end row -->
+        </div> <!-- end container -->
+    </section>        
+    <!-- end page-title -->
 
 
-        <!-- start offer -->
-        <section class="section-padding offer-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-md-5">
-                        <div class="section-title-s3">
-                            <h2>Get full range of premium Industrial services for your business</h2>
-                        </div>                        
-                        <div class="offer-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisc ing elit, sed do eiusmod tempor inci didunt ut labore et dolore magna.</p>
-                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
-                            <a href="#" class="theme-btn read-more">Read More</a>
-                            <a href="#" class="theme-btn-s2 read-more">Company history</a>
-                        </div>
-                    </div>
-                    <div class="col col-md-7">
-                        <div class="offer-pic">
-                            <img src="assets/images/offer-pic.jpg" alt>
-                        </div>
-                    </div>
-                </div> <!-- end row -->
-            </div> <!-- end container -->
-        </section>
-        <!-- end offer -->  
-
-
-        <!-- start cta -->
-        <section class="cta section-padding parallax" data-bg-image="assets/images/cta-bg.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-xs-12">
-                        <h2>Our one and only priority is the <span>customer satisfaction</span></h2>
-                        <a href="#" class="theme-btn-s5">Get a quote</a>
+    <!-- start offer -->
+    <section class="section-padding offer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-5">
+                    <div class="section-title-s3">
+                        <h2>History of M Electric</h2>
+                    </div>                        
+                    <div class="offer-text">
+                        <p>M Electric was founded in 2004 in the city of Dallas and has built a solid reputation based on its good work results, as well as the performance of its employees, and the collaboration of suppliers, contractors and above all in maintaining a solid relationship with its clients, which has allowed us to expand our services in the residential, commercial and industrial areas.</p>
+                        <!-- <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p> -->
+                        <br>
+                        <h3>Mission</h3>
+                        <p>Our mission as a company is to meet the needs of our clients in a timely manner by providing them with a quality service.</p>
+                        <br>
+                        <br>
+                        <h3>View</h3>
+                        <p>Carry out our work respecting the codes and standards established by the NEC (National Electrical Code) and the regulations of each city in which the project is developed and thus provide our clients with jobs in a legal and safe manner.</p>
+                        <br>
+                        <br>
+                        <h3>Values</h3>
+                        <p>Social Values: Respect the codes and rules established by national and state entities.</p>
+                        <p>Customer service values: Respect, Trust and Communication.</p>
+                        <!-- <a href="#" class="theme-btn read-more">Read More</a> -->
+                        <!-- <a href="#" class="theme-btn-s2 read-more">Company history</a> -->
                     </div>
                 </div>
-            </div> <!-- end container -->
-        </section>
-        <!-- end cta -->
-
-
-        <!-- start features --> 
-        <section class="features section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-md-3">
-                        <div class="features-title">
-                            <h2>Why we are best</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor.</p>
-                        </div>
-                    </div>
-                    <div class="col col-md-3 col-sm-4">
-                        <div class="feature-grid">
-                            <div class="icon">
-                                <i class="fi flaticon-people"></i>
-                            </div>
-                            <div class="details">
-                                <h3>Expert Engineers</h3>
-                                <p>Sed quia non numquam eius modi tempo ra incidunt ut labore et dolore magnam aliq uam quaera.</p>
-                                <a href="#" class="more">Details <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-md-3 col-sm-4">
-                        <div class="feature-grid">
-                            <div class="icon">
-                                <i class="fi flaticon-support"></i>
-                            </div>
-                            <div class="details">
-                                <h3>Customer Support</h3>
-                                <p>Sed quia non numquam eius modi tempo ra incidunt ut labore et dolore magnam aliq uam quaera.</p>
-                                <a href="#" class="more">Details <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-md-3 col-sm-4">
-                        <div class="feature-grid">
-                            <div class="icon">
-                                <i class="fi flaticon-time-passing"></i>
-                            </div>
-                            <div class="details">
-                                <h3>Delivery On time</h3>
-                                <p>Sed quia non numquam eius modi tempo ra incidunt ut labore et dolore magnam aliq uam quaera.</p>
-                                <a href="#" class="more">Details <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
+                <div class="col col-md-7">
+                    <div class="offer-pic">
+                        <img src="{% static 'website/images/slider/slide-2-cropped.jpg' %}" alt>
                     </div>
                 </div>
-            </div> <!-- end container -->
-        </section> 
-        <!-- end features -->
+            </div> <!-- end row -->
+        </div> <!-- end container -->
+    </section>
+    <!-- end offer -->  
 
 
-        <!-- start our-team -->
-        <section class="our-team our-team-bg section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-md-8 col-md-offset-2">
-                        <div class="section-title-s5">
-                            <h2>Our team</h2>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
-                        </div>
-                    </div>
-                </div> <!-- end row -->
-
-                <div class="row">
-                    <div class="col col-lg-10 col-lg-offset-1">
-                        <div class="team-slider team-grids">
-                            <div class="team-grid">
-                                <div class="member-pic-social square-hover-effect-parent">
-                                    <div class="square-hover-effect">
-                                        <span class="hover-1"></span>
-                                        <span class="hover-2"></span>
-                                        <span class="hover-3"></span>
-                                        <span class="hover-4"></span>
-                                    </div>
-                                    <div class="member-pic">
-                                        <img src="assets/images/team/img-1.jpg" alt>
-                                    </div>
-                                    <div class="social">
-                                        <ul class="social-links">
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="member-info">
-                                    <h3>Malcolm Marshall</h3>
-                                    <p>Director of the board</p>
-                                </div>
-                            </div>
-                            <div class="team-grid">
-                                <div class="member-pic-social square-hover-effect-parent">
-                                    <div class="square-hover-effect">
-                                        <span class="hover-1"></span>
-                                        <span class="hover-2"></span>
-                                        <span class="hover-3"></span>
-                                        <span class="hover-4"></span>
-                                    </div>
-                                    <div class="member-pic">
-                                        <img src="assets/images/team/img-2.jpg" alt>
-                                    </div>
-                                    <div class="social">
-                                        <ul class="social-links">
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="member-info">
-                                    <h3>Stephen King</h3>
-                                    <p>Director of the board</p>
-                                </div>
-                            </div>
-                            <div class="team-grid">
-                                <div class="member-pic-social square-hover-effect-parent">
-                                    <div class="square-hover-effect">
-                                        <span class="hover-1"></span>
-                                        <span class="hover-2"></span>
-                                        <span class="hover-3"></span>
-                                        <span class="hover-4"></span>
-                                    </div>
-                                    <div class="member-pic">
-                                        <img src="assets/images/team/img-3.jpg" alt>
-                                    </div>
-                                    <div class="social">
-                                        <ul class="social-links">
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="member-info">
-                                    <h3>Michelle Conroy</h3>
-                                    <p>Director of the board</p>
-                                </div>
-                            </div>
-                            <div class="team-grid">
-                                <div class="member-pic-social square-hover-effect-parent">
-                                    <div class="square-hover-effect">
-                                        <span class="hover-1"></span>
-                                        <span class="hover-2"></span>
-                                        <span class="hover-3"></span>
-                                        <span class="hover-4"></span>
-                                    </div>
-                                    <div class="member-pic">
-                                        <img src="assets/images/team/img-1.jpg" alt>
-                                    </div>
-                                    <div class="social">
-                                        <ul class="social-links">
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="member-info">
-                                    <h3>Malcolm Marshall</h3>
-                                    <p>Director of the board</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- start cta -->
+    <section class="cta section-padding parallax" data-bg-image="{% static 'website/images/cta-bg.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col col-xs-12">
+                    <h2>Our one and only priority is the <span>customer satisfaction</span></h2>
+                    <a href="{% url 'contact' %}" class="theme-btn-s5">Contact Us</a>
                 </div>
-                
-            </div> <!-- end container -->
-        </section>
-        <!-- end our-team -->
+            </div>
+        </div> <!-- end container -->
+    </section>
+    <!-- end cta -->
 
 
-        <!-- start fun-fact -->
-        <section class="fun-fact">
-            <div class="container">
-                <div class="row start-count">
-                    <div class="col col-sm-4">
-                        <div class="grid">
-                            <h3><span class="counter" data-count="1200">00</span><span>+</span></h3>
-                            <span class="fact-title">Projects</span>
-                            <p>inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam</p>
+            <!-- start features
+            <section class="features section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-md-3">
+                            <div class="features-title">
+                                <h2>Why we are best</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col col-sm-4">
-                        <div class="grid">
-                            <h3><span class="counter" data-count="800">00</span><span>+</span></h3>
-                            <span class="fact-title">Clients</span>
-                            <p>inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam</p>
+                        <div class="col col-md-3 col-sm-4">
+                            <div class="feature-grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-people"></i>
+                                </div>
+                                <div class="details">
+                                    <h3>Expert Engineers</h3>
+                                    <p>Sed quia non numquam eius modi tempo ra incidunt ut labore et dolore magnam aliq uam quaera.</p>
+                                    <a href="#" class="more">Details <i class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col col-sm-4">
-                        <div class="grid">
-                            <h3><span class="counter" data-count="99.5">00</span><span>%</span></h3>
-                            <span class="fact-title">satisfaction</span>
-                            <p>inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam</p>
+                        <div class="col col-md-3 col-sm-4">
+                            <div class="feature-grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-support"></i>
+                                </div>
+                                <div class="details">
+                                    <h3>Customer Support</h3>
+                                    <p>Sed quia non numquam eius modi tempo ra incidunt ut labore et dolore magnam aliq uam quaera.</p>
+                                    <a href="#" class="more">Details <i class="fa fa-angle-right"></i></a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div> <!-- end container -->
-        </section>
-        <!-- end fun-fact -->
-
-
-        <!-- start partners
-        <section class="section-padding partners partners-bg">
-            <h2 class="hidden">Partners</h2>
-            <div class="container">
-                <div class="row">
-                    <div class="col col-xs-12">
-                        <div class="partners-slider">
-                            <div class="grid">
-                                <img src="assets/images/partners/img-1.png" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-2.png" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-3.png" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-4.png" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/img-2.png" alt>
+                        <div class="col col-md-3 col-sm-4">
+                            <div class="feature-grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-time-passing"></i>
+                                </div>
+                                <div class="details">
+                                    <h3>Delivery On time</h3>
+                                    <p>Sed quia non numquam eius modi tempo ra incidunt ut labore et dolore magnam aliq uam quaera.</p>
+                                    <a href="#" class="more">Details <i class="fa fa-angle-right"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div> 
-            </div>
-        </section>
-        end partners -->
+            </section> 
+            end features -->
 
-{% endblock %}
+
+            <!-- start our-team -->
+            <section class="our-team our-team-bg section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-md-8 col-md-offset-2">
+                            <div class="section-title-s5">
+                                <h2>Our team</h2>
+                                <p>We know that to give you the best service we need the best team, that is why we have the best trained staff ready to help you with whatever you need.</p>
+                            </div>
+                        </div>
+                    </div> <!-- end row -->
+
+                    <div class="row">
+                        <div class="col col-lg-10 col-lg-offset-1">
+                            <div class="team-slider team-grids">
+                                <div class="team-grid">
+                                    <div class="member-pic-social square-hover-effect-parent">
+                                        <div class="">
+                                            <!-- <div class="square-hover-effect"> -->
+                                                <span class="hover-1"></span>
+                                                <span class="hover-2"></span>
+                                                <span class="hover-3"></span>
+                                                <span class="hover-4"></span>
+                                            </div>
+                                            <div class="member-pic">
+                                                <img src="{% static 'website/images/team/img-1.jpg' %}" alt>
+                                            </div>
+                                        <!-- <div class="social">
+                                            <ul class="social-links">
+                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                    <div class="member-info">
+                                        <h3>Jose Menendez</h3>
+                                        <p>CEO</p>
+                                    </div>
+                                </div>
+
+                                <div class="team-grid">
+                                    <div class="member-pic-social square-hover-effect-parent">
+                                        <div class="">
+                                            <span class="hover-1"></span>
+                                            <span class="hover-2"></span>
+                                            <span class="hover-3"></span>
+                                            <span class="hover-4"></span>
+                                        </div>
+                                        <div class="member-pic">
+                                            <img src="{% static 'website/images/team/img-3.jpg' %}" alt>
+                                        </div>
+                                        <!-- <div class="social">
+                                            <ul class="social-links">
+                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                    <div class="member-info">
+                                        <h3>Yessica Flores</h3>
+                                        <p>Logistics Manager</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="team-grid">
+                                    <div class="member-pic-social square-hover-effect-parent">
+                                        <div class="">
+                                            <!-- <div class="square-hover-effect"> -->
+                                                <span class="hover-1"></span>
+                                                <span class="hover-2"></span>
+                                                <span class="hover-3"></span>
+                                                <span class="hover-4"></span>
+                                            </div>
+                                            <div class="member-pic">
+                                                <img src="{% static 'website/images/team/img-1.jpg' %}" alt>
+                                            </div>
+                                        <!-- <div class="social">
+                                            <ul class="social-links">
+                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                    <div class="member-info">
+                                        <h3>Jose Menendez</h3>
+                                        <p>CEO</p>
+                                    </div>
+                                </div>
+
+                                <div class="team-grid">
+                                    <div class="member-pic-social square-hover-effect-parent">
+                                        <div class="">
+                                            <span class="hover-1"></span>
+                                            <span class="hover-2"></span>
+                                            <span class="hover-3"></span>
+                                            <span class="hover-4"></span>
+                                        </div>
+                                        <div class="member-pic">
+                                            <img src="{% static 'website/images/team/img-3.jpg' %}" alt>
+                                        </div>
+                                        <!-- <div class="social">
+                                            <ul class="social-links">
+                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                    <div class="member-info">
+                                        <h3>Yessica Flores</h3>
+                                        <p>Logistics Manager</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div> <!-- end container -->
+            </section>
+            <!-- end our-team -->
+
+
+            <!-- start fun-fact -->
+            <section class="fun-fact">
+                <div class="container">
+                    <div class="row start-count">
+                        <div class="col col-sm-4">
+                            <div class="grid">
+                                <h3><span class="counter" data-count="1200">00</span><span>+</span></h3>
+                                <span class="fact-title">Projects</span>
+                                <!-- <p>inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam</p> -->
+                            </div>
+                        </div>
+                        <div class="col col-sm-4">
+                            <div class="grid">
+                                <h3><span class="counter" data-count="800">00</span><span>+</span></h3>
+                                <span class="fact-title">Clients</span>
+                                <!-- <p>inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam</p> -->
+                            </div>
+                        </div>
+                        <div class="col col-sm-4">
+                            <div class="grid">
+                                <h3><span class="counter" data-count="99.5">00</span><span>%</span></h3>
+                                <span class="fact-title">satisfaction</span>
+                                <!-- <p>inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end container -->
+            </section>
+            <!-- end fun-fact -->
+
+
+            <!-- start partners
+            <section class="section-padding partners partners-bg">
+                <h2 class="hidden">Partners</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-xs-12">
+                            <div class="partners-slider">
+                                <div class="grid">
+                                    <img src="assets/images/partners/img-1.png" alt>
+                                </div>
+                                <div class="grid">
+                                    <img src="assets/images/partners/img-2.png" alt>
+                                </div>
+                                <div class="grid">
+                                    <img src="assets/images/partners/img-3.png" alt>
+                                </div>
+                                <div class="grid">
+                                    <img src="assets/images/partners/img-4.png" alt>
+                                </div>
+                                <div class="grid">
+                                    <img src="assets/images/partners/img-2.png" alt>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </section>
+            end partners -->
+
+            {% endblock %}
