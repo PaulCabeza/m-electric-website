@@ -22,7 +22,7 @@ def contact(request):
 			message, #message
 			message_email, #email
 			# message_phone, #phone number
-			['ovidio.cabeza@gmail.com'], # To email
+			['ovidio.cabeza@gmail.com','Josemenendez@m-electric.net','admin@m-electric.net'], # To email
 			)
 
 
