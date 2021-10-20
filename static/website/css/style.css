@@ -3547,7 +3547,8 @@ img {
 .header-style-6 .social-links li a {
   font-size: 14px;
   font-size: 0.93333rem;
-  color: #111183;
+  /* color: #111183; */
+  color: #9a9a9a
 }
 
 
