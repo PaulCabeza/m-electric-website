@@ -3,6 +3,10 @@ from django.core.mail import send_mail
 
 # Create your views here.
 
+# func to render the review form inside get-review page
+def get_reviews(request):
+	return render(request, 'getreviews.html')
+
 def home(request):
 	return render(request, 'home.html', {})
 
