@@ -1,5 +1,8 @@
 from django.shortcuts import render
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
+
+from melectric_web.settings import EMAIL_HOST_USER
+
 
 # Create your views here.
 
@@ -7,19 +10,16 @@ from django.core.mail import send_mail
 def leave_a_review(request): # func to render and process the review information and send it to email
 	if request.method == 'POST': # If form has been sent then send the email
 		message_f_name = request.POST['f_name']
-		message_l_name = request.POST['company_position']
+		message_company = request.POST['company_position']
 		message_email = request.POST['email']
 		# message_phone = request.POST['picture']
-		message = request.POST['note']
+		to_email = ['ovidio.cabeza@gmail.com',]
+		message = message_email + ', ' + request.POST['message'] 
+		message_subject = 'New review from ' + message_f_name + ', from ' + message_company
+		email = EmailMessage(message_subject, message, EMAIL_HOST_USER, to_email)
 
-		send_mail(
-			'New message from ' + message_f_name + ' ' + message_l_name, #subject
-			message, #message
-			message_email, #email
-			# message_phone, #phone number
-			['ovidio.cabeza@gmail.com','Josemenendez@m-electric.net','admin@m-electric.net'], # To email
-			)
-
+		# picture = request.FILES['picture']
+		email.send()
 
 		return render(request, 'getreviews.html', {'f_name':message_f_name})
 	else:
