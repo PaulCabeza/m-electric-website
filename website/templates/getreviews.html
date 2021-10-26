@@ -25,6 +25,7 @@
     <div class="container">
         {% if f_name %}
         <center>
+
             <h2>
                 Thanks for your Review
             </h2>
@@ -37,6 +38,7 @@
         <div class="row">
             <div class="col col-md-3">
                 <div class="contact-info">
+                    <br><br><br>
                     
                     <ul>
                         <li>
@@ -49,19 +51,19 @@
             
             <div class="col col-md-offset-1 col-md-8">
                 <div>
-                    <form class="contact-form form contact-validation-active row" action="{% url 'leave-a-review' %}" method="post">
+                    <form class="contact-form form contact-validation-active row" action="{% url 'leave-a-review' %}" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="col col-sm-6">
                             <label for="f-name">Full Name</label>
                             <input type="text" class="form-control" id="f-name" name="f_name">
                         </div>
                         <div class="col col-sm-6">
-                            <label for="l-name">Company/ Job Title</label>
-                            <input type="text" class="form-control" id="company_position" name="company_position">
-                        </div>
-                        <div class="col col-sm-6">
                             <label for="email">Email</label>
                             <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="col col-sm-6">
+                            <label for="l-name">Company/ Job Title</label>
+                            <input type="text" class="form-control" id="company_position" name="company_position">
                         </div>
                         <div class="col col-sm-6">
                             <label for="picture">Your picture</label>
