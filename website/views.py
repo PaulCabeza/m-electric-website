@@ -18,7 +18,10 @@ def leave_a_review(request): # func to render and process the review information
 		message_subject = 'New review from ' + message_f_name + ', from ' + message_company
 		email = EmailMessage(message_subject, message, EMAIL_HOST_USER, to_email)
 
-		# picture = request.FILES['picture']
+		if request.FILES['picture']:
+			picture = request.FILES['picture']
+			email.attach(picture.name, picture.read(), picture.content_type)
+
 		email.send()
 
 		return render(request, 'getreviews.html', {'f_name':message_f_name})
