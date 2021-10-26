@@ -3,17 +3,38 @@ from django.core.mail import send_mail
 
 # Create your views here.
 
-# func to render the review form inside get-review page
-def get_reviews(request):
-	return render(request, 'getreviews.html')
 
-def home(request):
+def leave_a_review(request): # func to render and process the review information and send it to email
+	if request.method == 'POST': # If form has been sent then send the email
+		message_f_name = request.POST['f_name']
+		message_l_name = request.POST['company_position']
+		message_email = request.POST['email']
+		# message_phone = request.POST['picture']
+		message = request.POST['note']
+
+		send_mail(
+			'New message from ' + message_f_name + ' ' + message_l_name, #subject
+			message, #message
+			message_email, #email
+			# message_phone, #phone number
+			['ovidio.cabeza@gmail.com','Josemenendez@m-electric.net','admin@m-electric.net'], # To email
+			)
+
+
+		return render(request, 'getreviews.html', {'f_name':message_f_name})
+	else:
+		return render(request, 'getreviews.html', {})
+
+
+def home(request): #function to render the home page
 	return render(request, 'home.html', {})
 
-def about(request):
+
+def about(request): #function to render the about page
 	return render(request, 'about.html', {})
 
-def contact(request):
+
+def contact(request): # function to send the email in contact form
 	if request.method == 'POST':
 		message_f_name = request.POST['f_name']
 		message_l_name = request.POST['l_name']
