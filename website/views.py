@@ -14,7 +14,7 @@ def leave_a_review(request): # func to render and process the review information
 		message_email = request.POST['email']
 		# message_phone = request.POST['picture']
 		to_email = ['ovidio.cabeza@gmail.com',]
-		message = message_email + ', ' + request.POST['message'] 
+		message = message_email + ', ' + request.POST['message']
 		message_subject = 'New review from ' + message_f_name + ', from ' + message_company
 		email = EmailMessage(message_subject, message, EMAIL_HOST_USER, to_email)
 		email.content_subtype = 'html'
@@ -38,6 +38,9 @@ def home(request): #function to render the home page
 
 def about(request): #function to render the about page
 	return render(request, 'about.html', {})
+
+def gallery(request): #function to render the gallery page
+	return render(request, 'gallery.html', {})
 
 
 def contact(request): # function to send the email in contact form
