@@ -49,7 +49,8 @@ def contact(request): # function to send the email in contact form
 		message_l_name = request.POST['l_name']
 		message_email = request.POST['email']
 		message_phone = request.POST['phone']
-		message = request.POST['note']
+		message_body = request.POST['note']
+		message = "Message: " + message_body + "\n" + "Email: " + message_email + "\n" + "Phone: " + message_phone
 
 		send_mail(
 			'New message from ' + message_f_name + ' ' + message_l_name, #subject
