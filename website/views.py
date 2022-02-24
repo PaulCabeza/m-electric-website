@@ -13,8 +13,8 @@ def leave_a_review(request): # func to render and process the review information
 		message_company = request.POST['company_position']
 		message_email = request.POST['email']
 		# message_phone = request.POST['picture']
-		to_email = ['ovidio.cabeza@gmail.com',]
-		message = message_email + ', ' + request.POST['message']
+		to_email = ['ovidio.cabeza@gmail.com','Josemenendez@m-electric.net','admin@m-electric.net']
+		message = 'Review: ' + request.POST['message'] + "\n" + "From: " + message_f_name + '(' + message_email + ')' + "\n" + "Company: " + message_company
 		message_subject = 'New review from ' + message_f_name + ', from ' + message_company
 		email = EmailMessage(message_subject, message, EMAIL_HOST_USER, to_email)
 		email.content_subtype = 'html'
@@ -30,17 +30,6 @@ def leave_a_review(request): # func to render and process the review information
 		return render(request, 'getreviews.html', {'f_name':message_f_name})
 	else:
 		return render(request, 'getreviews.html', {})
-
-
-def home(request): #function to render the home page
-	return render(request, 'home.html', {})
-
-
-def about(request): #function to render the about page
-	return render(request, 'about.html', {})
-
-def gallery(request): #function to render the gallery page
-	return render(request, 'gallery.html', {})
 
 
 def contact(request): # function to send the email in contact form
@@ -64,3 +53,15 @@ def contact(request): # function to send the email in contact form
 		return render(request, 'contact.html', {'f_name':message_f_name})
 	else:
 		return render(request, 'contact.html', {})
+
+
+def home(request): #function to render the home page
+	return render(request, 'home.html', {})
+
+
+def about(request): #function to render the about page
+	return render(request, 'about.html', {})
+
+
+def gallery(request): #function to render the gallery page
+	return render(request, 'gallery.html', {})
